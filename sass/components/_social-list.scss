@@ -1,0 +1,29 @@
+.social-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-list__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 12px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+        fill: var(--white-color);
+        background-color: var(--accent-color);
+    }
+    
+    &--theme-light {
+        fill: #afb1b8;
+        background-color: transparent;
+    }
+    
+    &--theme-dark {
+        fill: var(--white-color);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
