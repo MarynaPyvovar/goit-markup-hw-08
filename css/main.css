@@ -9,6 +9,9 @@
   --background-btn-grey: #f5f4fa;
   --background-btn-blue: #188ce8;
   --contact-color: #c4c4c4;
+  --mobile: 480px;
+  --tablet: 768px;
+  --desktop: 1200px;
 }
 
 .visually-hidden {
@@ -55,7 +58,7 @@ body {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: var(--desktop)) {
   .section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -63,22 +66,22 @@ body {
 }
 
 .container {
-  width: 480px;
+  width: var(--mobile);
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: var(--tablet)) {
   .container {
-    width: 768px;
+    width: var(--tablet);
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: var(--desktop)) {
   .container {
-    width: 1200px;
+    width: var(--desktop);
   }
 }
 
@@ -578,7 +581,7 @@ body {
   padding-bottom: 200px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: var(--desktop)) {
   .benefits {
     padding-bottom: 0;
   }
@@ -588,7 +591,7 @@ body {
   display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: var(--tablet)) {
   .benefits__list {
     display: flex;
     flex-wrap: wrap;
@@ -600,23 +603,23 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
+  .benefits__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: var(--tablet)) {
   .benefits__item {
     width: calc((100% - 2 * 30px) / 2);
     margin: 15px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: var(--desktop)) {
   .benefits__item {
     flex-basis: calc((100% - 4 * 30px) / 4);
     margin: 15px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .benefits__item:not(:last-child) {
-    margin-bottom: 30px;
   }
 }
 
@@ -646,6 +649,12 @@ body {
   font-size: 14px;
   line-height: 1.74;
   letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 1199px) {
+  .section__services {
+    display: none;
+  }
 }
 
 .services {
