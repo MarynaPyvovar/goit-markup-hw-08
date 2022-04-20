@@ -6,6 +6,7 @@
 
 .benefits__list {
     display: block;
+
     @media screen and (min-width: $tablet) {
         display: flex;
         flex-wrap: wrap;
@@ -15,13 +16,14 @@
 
 .benefits__item {
     width: 100%;
+
     @media screen and (min-width: $tablet) {
         width: calc((100% - 2 * 30px) / 2);
         margin: 15px;
         }
     
     @media screen and (min-width: $desktop) {
-        flex-basis: calc((100% - 4 * 30px) / 4);
+        width: calc((100% - 4 * 30px) / 4);
         margin: 15px;
         }
 

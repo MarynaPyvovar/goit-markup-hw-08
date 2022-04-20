@@ -1,11 +1,25 @@
 .filter {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
     
-    &__item+&__item {
-        margin-left: 8px;
+    @media screen and (min-width: $tablet) {
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 30px;
     }
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
+}
+
+.filter__item {
+    @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+    }
+    &+& {
+    margin-left: 8px;
+}
 }
 
 .portfolio {

@@ -282,6 +282,7 @@ body {
 .social-list {
   display: flex;
   justify-content: space-between;
+  width: 206px;
 }
 
 .social-list__icon {
@@ -654,7 +655,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .benefits__item {
-    flex-basis: calc((100% - 4 * 30px) / 4);
+    width: calc((100% - 4 * 30px) / 4);
     margin: 15px;
   }
 }
@@ -737,21 +738,48 @@ body {
 }
 
 .employees__list {
-  display: flex;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .employees__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .employees__card {
-  width: 270px;
+  width: 100%;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.employees__card + .employees__card {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .employees__card {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .employees__card {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .employees__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .employees__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 30px 32px;
 }
 
@@ -777,13 +805,34 @@ body {
 
 .clients {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.clients__item {
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: calc((100% - 6 * 30px) / 6);
+  }
 }
 
 .clients__icon {
-  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 92px;
-  padding: 16px 32px;
+  padding: 16px auto;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
@@ -797,8 +846,28 @@ body {
 
 .filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__item + .filter__item {
