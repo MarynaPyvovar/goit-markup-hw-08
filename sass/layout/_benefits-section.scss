@@ -1,4 +1,4 @@
-@media screen and (min-width: var(--desktop)) {
+@media screen and (min-width: $desktop) {
 .benefits {
     padding-bottom: 0;
 }}
@@ -6,7 +6,7 @@
 
 .benefits__list {
     display: block;
-    @media screen and (min-width: var(--tablet)) {
+    @media screen and (min-width: $tablet) {
         display: flex;
         flex-wrap: wrap;
         margin: -15px;
@@ -15,19 +15,20 @@
 
 .benefits__item {
     width: 100%;
-    &:not(:last-child) {
-        @media screen and (max-width: 767px) {
-            margin-bottom: 30px;
-        }}
-    @media screen and (min-width: var(--tablet)) {
+    @media screen and (min-width: $tablet) {
         width: calc((100% - 2 * 30px) / 2);
         margin: 15px;
         }
     
-    @media screen and (min-width: var(--desktop)) {
+    @media screen and (min-width: $desktop) {
         flex-basis: calc((100% - 4 * 30px) / 4);
         margin: 15px;
         }
+
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }}
 }
 
 .benefits__icon-wrapper {
