@@ -1,10 +1,24 @@
 .header {
     border-bottom: 1px solid #ececec;
+    position: relative;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    &.is-open {
+        display: block;
+    }
 }
 
 .site-nav {
@@ -14,6 +28,35 @@
     &__item+&__item {
         margin-left: 50px;
     }
+}
+
+.site-nav__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.site-nav__icon {
+    fill: var(--logo-color);
+    .site-nav__button:hover &,
+    .site-nav__button:focus & {
+        fill: var(--accent-color);
+    }
+}
+
+.site-nav__icon--close-x {
+    display: none;
+    .site-nav__button.is-open & {
+        display: block;
+    }
+}
+
+.site-nav__button.is-open .site-nav__icon--menu {
+    display: none;
 }
 
 .site-nav__link {

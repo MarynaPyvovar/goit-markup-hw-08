@@ -22,13 +22,18 @@
     <header class="header">
       <div class="container main-nav">
         <a class="logo" href="" lang="en">Web<span class="logo--dark">Studio</span> </a>
-        <nav>
+        <button type="button" class="site-nav__button" data-menu-button aria-expanded="false" aria-controls="menu-container">
+          <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+            <use class="site-nav__icon site-nav__icon--menu" href="./images/icons.svg#menu"></use>
+            <use class="site-nav__icon site-nav__icon--close-x" href="./images/icons.svg#close-x"></use>
+          </svg>
+        </button>
+        <nav class="menu-container" data-menu id="menu-container">
           <ul class="site-nav list">
             <li class="site-nav__item"><a href="./index.html" class="site-nav__link link site-nav__current">Студия</a></li>
             <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
             <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
           </ul>
-        </nav>
         <ul class="contacts list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link contacts__mail link"
@@ -43,6 +48,7 @@
             >
           </li>
         </ul>
+      </nav>
       </div>
     </header>
     <!-- контент -->
@@ -103,7 +109,7 @@
         </div>
       </section>
       <!-- чем мы занимаемся-->
-      <section class="section">
+      <section class="section section__services">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="services list">
@@ -407,5 +413,6 @@
             </div>
           </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
