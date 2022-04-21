@@ -17,17 +17,21 @@
   </head>
   <body>
     <!-- шапка -->
-    <header>
+    <header class="header">
       <div class="container main-nav">
-        <a class="logo" href="" lang="en">Web
-          <span class="logo--dark">Studio</span></a>
-        <nav>
+        <a class="logo" href="" lang="en">Web<span class="logo--dark">Studio</span> </a>
+        <button type="button" class="site-nav__button" data-menu-button aria-expanded="false" aria-controls="menu-container">
+          <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+            <use class="site-nav__icon site-nav__icon--menu" href="./images/icons.svg#menu"></use>
+            <use class="site-nav__icon site-nav__icon--close-x" href="./images/icons.svg#close-x"></use>
+          </svg>
+        </button>
+        <nav class="menu-container" data-menu id="menu-container">
           <ul class="site-nav list">
-            <li class="site-nav__item"><a href="./index.html" class="site-nav__link link ">Студия</a></li>
-            <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link site-nav__current">Портфолио</a></li>
+            <li class="site-nav__item"><a href="./index.html" class="site-nav__link link site-nav__current">Студия</a></li>
+            <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link">Портфолио</a></li>
             <li class="site-nav__item"><a href="" class="site-nav__link link">Контакты</a></li>
           </ul>
-        </nav>
         <ul class="contacts list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link contacts__mail link"
@@ -42,6 +46,7 @@
             >
           </li>
         </ul>
+      </nav>
       </div>
     </header>
     <!-- контент -->
@@ -173,9 +178,10 @@
     <!-- подвал -->
     <footer class="footer">
       <div class="container footer__container">
-        <div>
+        <div class="footer__info">
+        <div class="address">
           <a class="logo footer__logo" href="" lang="en">Web<span class="logo--light">Studio</span> </a>
-        <address class="address">
+        <address>
           <a href="https://goo.gl/maps/GyggzFE7eTkepQ136" class="address__link address__office link"
             >г. Киев, пр-т Леси Украинки, 26</a
           >
@@ -214,6 +220,7 @@
                   </li>
                 </ul>
         </div>
+      </div>
         <div class="subscribe">
           <form>
             <label for="email" class="subscribe__title">Подпишитесь на рассылку</label>
