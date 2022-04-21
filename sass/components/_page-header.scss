@@ -6,29 +6,33 @@
 .main-nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
 }
 
 .menu-container {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    padding: 48px 40px;
+    background-color: var(--white-color);
+
+    @media screen and (max-width: 767px) {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
 
     &.is-open {
         display: block;
     }
-}
+    }
 
-.site-nav {
-    display: flex;
-    margin-left: 93px;
-    
-    &__item+&__item {
-        margin-left: 50px;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
     }
 }
+
 
 .site-nav__button {
     display: flex;
@@ -38,6 +42,10 @@
     height: 40px;
     background-color: transparent;
     border: transparent;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
 }
 
 .site-nav__icon {
@@ -59,14 +67,40 @@
     display: none;
 }
 
+.site-nav {
+    margin-bottom: 300px;
+
+    @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 93px;
+    margin-bottom: 0;
+    }
+}
+
 .site-nav__link {
     color: var(--title-color);
-    display: block;
+    display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175px;
+    
     &:hover,
     &:focus {
         color: var(--accent-color);
+    }
+
+    @media screen and (min-width: $tablet) {
+        font-size: 14px;
+        line-height: 1.14px;
+    }
+
+    @media screen and (min-width: $desktop) {
+    &__link + &__link {
+        margin-left: 50px;
+    }
     }
 }
 
@@ -74,6 +108,7 @@
     position: relative;
     color: var(--accent-color);
     
+    @media screen and (min-width: $tablet) {
     &::after {
         content: "";
         position: absolute;
@@ -83,46 +118,6 @@
         right: 0;
         background: #2196F3;
         border-radius: 2px;
-    }
-}
-
-.contacts {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    
-    &__item+&__item {
-        margin-left: 50px;
-    }
-}
-
-.contacts__link {
-    color: var(--phrase-color);
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
-}
-
-.contacts__mail {
-    display: flex;
-    align-items: center;
-    
-    &-icon {
-        margin-right: 10px;
-        fill: currentColor;
-    }
-}
-
-.contacts__tel {
-    display: flex;
-    align-items: center;
-    
-    &-icon {
-        margin-right: 10px;
-        fill: currentColor;
+        }
     }
 }

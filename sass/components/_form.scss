@@ -1,5 +1,5 @@
 .form {
-    width: 448px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -73,10 +73,13 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-    margin-left: 7px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+    }
 }
 
 .form__policy-link {
