@@ -5,14 +5,44 @@
 }
 
 .footer__container {
+    display: block;
+    
+    // @media screen and (min-width: $tablet) {
+        
+    //     flex-wrap: wrap;
+    // }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__info {
+    @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
+    }
 }
 
 .footer__logo {
     display: block;
     margin-top: 0;
     margin-bottom: 20px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+
+    @media screen and (min-width: $tablet) {
+        width: 52%;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 0;
+    }
 }
 
 .address__link {
@@ -42,8 +72,22 @@
 }
 
 .join {
-    padding-top: 12px;
-    width: 206px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+    
+    @media screen and (min-width: $tablet) {
+        width: 48%;
+        padding-top: 5px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 12px;
+        margin-left: 70px;
+        margin-bottom: 0;
+    }
 }
 
 .join__title {
@@ -57,8 +101,17 @@
     margin-bottom: 20px;
 }
 
+.subscibe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .subscribe__title {
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
     padding-top: 12px;
     font-weight: 700;
@@ -66,18 +119,26 @@
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
     color: var(--white-color);
+    
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
 }
 
 .subscibe__field {
-    display: flex;
+    width: 100%;
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
 .subscribe__input {
-    width: 358px;
+    width: 100%;
     height: 50px;
     padding: 15px;
-    margin-right: 12px;
+    margin-bottom: 20px;
     background-color: transparent;
     outline: none;
     color: var(--white-color);
@@ -90,6 +151,11 @@
         line-height: 20px;
         letter-spacing: 0.03em;
         color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 358px;
+        margin-right: 12px;
     }
 }
 
