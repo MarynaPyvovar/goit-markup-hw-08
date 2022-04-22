@@ -1,7 +1,6 @@
 .contacts {
 
     @media screen and (min-width: $tablet) {
-    padding: 21px 15px;
     margin-left: 84px;
     }
 
@@ -11,7 +10,6 @@
         align-items: center;
         margin-left: 305px;
     }
-
 }
 
 .contacts__link {
@@ -24,8 +22,8 @@
     }
 
     @media screen and (min-width: $desktop) {
-        padding-top: 32px;
-        padding-bottom: 32px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
 

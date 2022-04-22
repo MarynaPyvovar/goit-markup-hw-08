@@ -96,33 +96,40 @@ body {
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
-.menu-container {
-  padding: 48px 40px;
-  background-color: var(--white-color);
 }
 
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
   }
   .menu-container.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: var(--white-color);
   }
 }
 
 @media screen and (min-width: 768px) {
   .menu-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0;
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    margin-left: 93px;
   }
 }
 
@@ -132,6 +139,7 @@ body {
   align-items: center;
   width: 40px;
   height: 40px;
+  margin-left: auto;
   background-color: transparent;
   border: transparent;
 }
@@ -163,23 +171,24 @@ body {
   display: none;
 }
 
-.site-nav {
-  margin-bottom: 300px;
-}
-
 @media screen and (min-width: 768px) {
   .site-nav {
     display: flex;
-    margin-left: 93px;
-    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item + .site-nav__item {
+    margin-left: 50px;
   }
 }
 
 .site-nav__link {
   color: var(--title-color);
-  display: inline-block;
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  margin: 0;
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
@@ -194,12 +203,6 @@ body {
   .site-nav__link {
     font-size: 14px;
     line-height: 1.14px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .site-nav__link__link + .site-nav__link__link {
-    margin-left: 50px;
   }
 }
 
@@ -241,7 +244,6 @@ body {
 
 @media screen and (min-width: 768px) {
   .contacts {
-    padding: 21px 15px;
     margin-left: 84px;
   }
 }
@@ -266,8 +268,8 @@ body {
 
 @media screen and (min-width: 1200px) {
   .contacts__link {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
@@ -1177,7 +1179,7 @@ body {
 
 .portfolio__description {
   width: 100%;
-  padding: 20px auto;
+  padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
