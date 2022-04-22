@@ -239,23 +239,19 @@ body {
   color: var(--logo-color);
 }
 
-.contacts {
-  display: flex;
-  flex-direction: column;
-}
-
-.contacts__item + .contacts__item {
-  margin-bottom: 32px;
+@media screen and (min-width: 768px) {
+  .contacts {
+    padding: 21px 15px;
+    margin-left: 84px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .contacts {
+    display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    margin-left: auto;
-  }
-  .contacts__item + .contacts__item {
-    margin-left: 50px;
+    margin-left: 305px;
   }
 }
 
@@ -278,21 +274,85 @@ body {
 .contacts__mail {
   display: flex;
   align-items: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  margin-bottom: 64px;
 }
 
-.contacts__mail-icon {
-  margin-right: 10px;
-  fill: currentColor;
+@media screen and (min-width: 768px) {
+  .contacts__mail {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .contacts__tel {
   display: flex;
   align-items: center;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+  color: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .contacts__tel {
+    color: var(--phrase-color);
+    font-size: 12px;
+    line-height: 1.17;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__tel {
+    margin-left: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.contacts__mail-icon,
 .contacts__tel-icon {
-  margin-right: 10px;
-  fill: currentColor;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__mail-icon,
+  .contacts__tel-icon {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+.contacts__social {
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__social {
+    display: none;
+  }
+}
+
+.contacts__social-item {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.contacts__social-item--first {
+  padding-left: 0;
+  border-left: 0;
 }
 
 .button {
@@ -420,6 +480,7 @@ body {
 }
 
 .modal {
+  position: relative;
   min-width: 320px;
   padding: 40px;
   background-color: var(--white-color);

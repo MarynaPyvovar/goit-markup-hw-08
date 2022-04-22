@@ -1,19 +1,15 @@
 .contacts {
-    display: flex;
-    flex-direction: column;
 
-    &__item+&__item {
-        margin-bottom: 32px;
+    @media screen and (min-width: $tablet) {
+    padding: 21px 15px;
+    margin-left: 84px;
     }
 
     @media screen and (min-width: $desktop) {
+        display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        margin-left: auto;
-
-        &__item+&__item {
-            margin-left: 50px;
-        }
+        margin-left: 305px;
     }
 
 }
@@ -36,19 +32,77 @@
 .contacts__mail {
     display: flex;
     align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    margin-bottom: 64px;
 
-    &-icon {
-        margin-right: 10px;
-        fill: currentColor;
+    @media screen and (min-width: $tablet) {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        
     }
 }
 
 .contacts__tel {
     display: flex;
     align-items: center;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+    color: var(--accent-color);
 
-    &-icon {
+    @media screen and (min-width: $tablet) {
+        color: var(--phrase-color);
+        font-size: 12px;
+        line-height: 1.17;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 30px;
+        margin-bottom: 0;
+    }
+}
+
+.contacts__mail-icon,
+.contacts__tel-icon {
+    display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: block;
         margin-right: 10px;
         fill: currentColor;
     }
+}
+
+.contacts__social {
+    display: flex;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.contacts__social-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+
+}
+
+.contacts__social-item--first {
+    padding-left: 0;
+    border-left: 0;
 }
