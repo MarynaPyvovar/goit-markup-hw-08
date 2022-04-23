@@ -82,6 +82,7 @@
 
 .contacts__social {
     display: flex;
+    flex-wrap: wrap;
 
     @media screen and (min-width: $tablet) {
         display: none;

@@ -63,7 +63,6 @@ body {
 }
 
 .container {
-  min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -108,12 +107,13 @@ body {
     justify-content: space-between;
     position: absolute;
     z-index: 5;
-    top: 100%;
+    top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     padding: 48px 40px;
     background-color: var(--white-color);
+    overflow: auto;
   }
 }
 
@@ -137,9 +137,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
-  margin-left: auto;
   background-color: transparent;
   border: transparent;
 }
@@ -150,6 +147,19 @@ body {
   }
 }
 
+.site-nav__button--open {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+}
+
+.site-nav__button--close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+}
+
 .site-nav__icon {
   fill: var(--logo-color);
 }
@@ -157,18 +167,6 @@ body {
 .site-nav__button:hover .site-nav__icon,
 .site-nav__button:focus .site-nav__icon {
   fill: var(--accent-color);
-}
-
-.site-nav__icon--close-x {
-  display: none;
-}
-
-.site-nav__button.is-open .site-nav__icon--close-x {
-  display: block;
-}
-
-.site-nav__button.is-open .site-nav__icon--menu {
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -333,6 +331,7 @@ body {
 
 .contacts__social {
   display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -761,12 +760,7 @@ body {
 }
 
 .subscibe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .subscribe__title {
@@ -792,9 +786,18 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .subscibe__field {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscibe__field {
+    flex-direction: row;
+    align-items: baseline;
   }
 }
 
@@ -816,6 +819,12 @@ body {
   line-height: 20px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe__input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
