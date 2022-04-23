@@ -20,13 +20,17 @@
     <header class="header">
       <div class="container main-nav">
         <a class="logo" href="" lang="en">Web<span class="logo--dark">Studio</span> </a>
-        <button type="button" class="site-nav__button" data-menu-button aria-expanded="false" aria-controls="menu-container">
-          <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+        <button type="button" class="site-nav__button site-nav__button--open" data-menu-open aria-controls="menu-container">
+          <svg width="24" height="16" aria-label="Кнопка мобильного меню">
             <use class="site-nav__icon site-nav__icon--menu" href="./images/icons.svg#menu"></use>
-            <use class="site-nav__icon site-nav__icon--close-x" href="./images/icons.svg#close-x"></use>
           </svg>
         </button>
         <nav class="menu-container" data-menu id="menu-container">
+          <button type="button" class="site-nav__button site-nav__button--close" data-menu-close>
+          <svg width="40" height="40" aria-label="Закрить мобильное меню">
+            <use class="site-nav__icon site-nav__icon--close-x" href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </button>
           <ul class="site-nav list">
             <li class="site-nav__item"><a href="./index.html" class="site-nav__link link">Студия</a></li>
             <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link link site-nav__current">Портфолио</a></li>
