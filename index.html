@@ -138,15 +138,18 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="services list">
             <li class="services__item"><div class="services__image">
-              <img src="./images/studio/img1.jpg" alt="Разработка кода" width="370" />
+              <img srcset="./images/studio/services/img1.jpg 1x, ./images/studio/services/img1@2x.jpg 2x" 
+              src="./images/studio/services/img1.jpg" alt="Разработка кода" width="370" />
             <p class="services__description">Десктопные приложения</p></div>
             </li>
             <li class="services__item"><div class="services__image">
-              <img src="./images/studio/img2.jpg" alt="Адаптация интерфейсов" width="370" />
+              <img srcset="./images/studio/services/img2.jpg 1x, ./images/studio/services/img2@2x.jpg 2x" 
+              src="./images/studio/services/img2.jpg" alt="Адаптация интерфейсов" width="370" />
             <p class="services__description">Мобильные приложения</p></div>
             </li>
             <li class="services__item"><div class="services__image">
-              <img src="./images/studio/img3.jpg" alt="Цветовые решения" width="370" />
+              <img srcset="./images/studio/services/img3.jpg 1x, ./images/studio/services/img3@2x.jpg 2x" 
+              src="./images/studio/services/img3.jpg" alt="Цветовые решения" width="370" />
             <p class="services__description">Дизайнерские решения</p></div>
             </li>
           </ul>
@@ -158,7 +161,12 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="employees__list list">
             <li class="employees__card">
-              <img src="./images/studio/team1.jpg" alt="фото Игоря" width="270" />
+              <picture>
+                <source srcset="./images/studio/team/team-desktop1.jpg 1x, ./images/studio/team/team-desktop1@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./images/studio/team/team-tablet1.jpg 1x, ./images/studio/team/team-tablet1@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./images/studio/team/team-mobile1.jpg 1x, ./images/studio/team/team-mobile1@2x.jpg 2x" media="(max-width: 767px)">
+              <img src="./images/studio/team/team-desktop1.jpg" alt="фото Игоря"/>
+            </picture>
               <div class="employees__description">
                 <h3 class="employees__name">Игорь Демьяненко</h3>
                 <p class="employees__prof" lang="en">Product Designer</p>
@@ -193,7 +201,12 @@
               </div>
             </li>
             <li class="employees__card">
-              <img src="./images/studio/team2.jpg" alt="фото Ольги" width="270" />
+              <picture>
+                <source srcset="./images/studio/team/team-desktop2.jpg 1x, ./images/studio/team/team-desktop2@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./images/studio/team/team-tablet2.jpg 1x, ./images/studio/team/team-tablet2@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./images/studio/team/team-mobile2.jpg 1x, ./images/studio/team/team-mobile2@2x.jpg 2x" media="(max-width: 767px)">
+              <img src="./images/studio/team/team-desktop2.jpg" alt="фото Ольги"/>
+            </picture>
               <div class="employees__description">
                 <h3 class="employees__name">Ольга Репина</h3>
                 <p class="employees__prof" lang="en">Frontend Developer</p>
@@ -228,7 +241,12 @@
               </div>
             </li>
             <li class="employees__card">
-              <img src="./images/studio/team3.jpg" alt="фото Николая" width="270" />
+              <picture>
+                <source srcset="./images/studio/team/team-desktop3.jpg 1x, ./images/studio/team/team-desktop3@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./images/studio/team/team-tablet3.jpg 1x, ./images/studio/team/team-tablet3@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./images/studio/team/team-mobile3.jpg 1x, ./images/studio/team/team-mobile3@2x.jpg 2x" media="(max-width: 767px)">
+              <img src="./images/studio/team/team-desktop3.jpg" alt="фото Николая"/>
+            </picture>
               <div class="employees__description">
                 <h3 class="employees__name">Николай Тарасов</h3>
                 <p class="employees__prof" lang="en">Marketing</p>
@@ -263,7 +281,12 @@
               </div>
             </li>
             <li class="employees__card">
-              <img src="./images/studio/team4.jpg" alt="фото Михаила" width="270" />
+              <picture>
+                <source srcset="./images/studio/team/team-desktop4.jpg 1x, ./images/studio/team/team-desktop4@2x.jpg 2x" media="(min-width: 1200px)">
+                <source srcset="./images/studio/team/team-tablet4.jpg 1x, ./images/studio/team/team-tablet4@2x.jpg 2x" media="(min-width: 768px)">
+                <source srcset="./images/studio/team/team-mobile4.jpg 1x, ./images/studio/team/team-mobile4@2x.jpg 2x" media="(max-width: 767px)">
+              <img src="./images/studio/team/team-desktop4.jpg" alt="фото Михаила"/>
+            </picture>
               <div class="employees__description">
                 <h3 class="employees__name">Михаил Ермаков</h3>
                 <p class="employees__prof" lang="en">UI Designer</p>
