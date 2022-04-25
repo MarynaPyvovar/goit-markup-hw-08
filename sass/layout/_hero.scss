@@ -1,15 +1,20 @@
 .hero {
     max-width: 1600px;
-    height: 600px;
+    // height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--background-hero);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/studio/fon.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/fon.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/fon@2x.jpg);
+    }
 }

@@ -41,7 +41,7 @@ body {
 }
 
 .link {
-  display: inline-block;
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -183,7 +183,6 @@ body {
 
 .site-nav__link {
   color: var(--title-color);
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   margin: 0;
@@ -442,10 +441,17 @@ body {
   text-align: center;
   color: var(--white-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+  .main-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .section__title {
@@ -846,7 +852,6 @@ body {
 
 .hero {
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--background-hero);
@@ -857,6 +862,12 @@ body {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/studio/fon@2x.jpg);
+  }
 }
 
 @media screen and (min-width: 1200px) {
