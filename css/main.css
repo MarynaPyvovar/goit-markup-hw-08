@@ -101,6 +101,7 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -156,7 +157,6 @@ img {
 .site-nav__button--open {
   width: 40px;
   height: 40px;
-  margin-left: auto;
 }
 
 .site-nav__button--close {
@@ -247,7 +247,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .contacts {
-    margin-left: 84px;
+    margin-left: 70px;
   }
 }
 

@@ -6,6 +6,7 @@
 .main-nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .menu-container {
@@ -58,7 +59,6 @@
 .site-nav__button--open {
     width: 40px;
     height: 40px;
-    margin-left: auto;
 }
 
 .site-nav__button--close {
