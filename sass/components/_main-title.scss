@@ -1,8 +1,6 @@
 .main-title {
     margin-top: 0;
     margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
     max-width: 696px;
     text-align: center;
     color: var(--white-color);
@@ -12,8 +10,15 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
+    @media screen and (min-width: $tablet) {
+        margin-left: 160px;
+        margin-right: 160px;
+    }
+
     @media screen and (min-width: $desktop) {
     font-size: 44px;
     line-height: 1.36;
-}
+    margin-left: auto;
+    margin-right: auto;
+    }
 }
